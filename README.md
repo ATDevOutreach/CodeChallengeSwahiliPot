@@ -41,7 +41,7 @@ In this code challenge you will be required to make a USSD application that impl
 4. If the user selects the send airtime option, they should be able to add how much they want to send and recieve an SMS that confirms airtime has been sent.
 
 ### Additional:
-1. See the online version of the code challenge [here](http://atdevoutreach.viewdocs.io/CodeChallengeSwahiliPot/CodeChallengeSwahilipot/) to get acquainted.
+1. See the online version of the code challenge [here](http://atdevoutreach.viewdocs.io/CodeChallengeSwahiliPot/CodeChallengeSwahiliPot/) to get acquainted.
 
 2.  Check out the format for submitting your code [here](http://atdevoutreach.viewdocs.io/CodeChallengeSwahiliPot/CodeChallengeSteps/)
 
