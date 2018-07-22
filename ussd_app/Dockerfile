@@ -1,5 +1,4 @@
 # Dockerfile
-# darklotus/loanbee-mpesa-broker
 FROM python:3.6-alpine
 
 # set environment vars
