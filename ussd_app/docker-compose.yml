@@ -1,0 +1,45 @@
+version: '3'
+services:
+  redis:
+    image: redis
+    networks:
+      - webnet
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:8000"
+    volumes:
+      - ./src:/src
+      - ./config/nginx:/etc/nginx/conf.d
+    networks:
+      - webnet
+    depends_on:
+      - flask_app
+  # app service
+  flask_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/src
+    command: ["./run_app.sh"]
+    healthcheck:
+      test: "CMD curl -f / http://localhost:8000 || exit 1"
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    expose:
+      - "8000"
+    depends_on:
+      - redis
+    networks:
+      - webnet
+    env_file:
+     - .env
+    environment:
+      REDIS_HOST: "redis"
+      REDIS_PORT: "6379"
+      REDIS_URL: "redis://redis:6379"
+
+networks:
+  webnet:
