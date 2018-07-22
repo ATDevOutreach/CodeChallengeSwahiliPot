@@ -1,6 +1,6 @@
 ## Africastalking Code Challange
 
-A running version of the app can be accessed on the AfricasTalking sandbo dial `*384*9240#`
+A running version of the app can be accessed on the AfricasTalking sandbox dial `*384*9240#`
 
 # Installation
 
