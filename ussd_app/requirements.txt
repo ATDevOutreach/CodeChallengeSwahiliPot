@@ -1,0 +1,6 @@
+AfricastalkingGateway==1.9
+celery
+Flask==0.12.2
+Flask-Redis==0.3.0
+gunicorn==19.7.1
+python-dotenv==0.8.2
